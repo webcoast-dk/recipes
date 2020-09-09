@@ -1,0 +1,23 @@
+{
+    "name": "webcoast/recipes",
+    "description": "TYPO3 extension for managing recipes with ingredients and preparation",
+    "license": "GPL-3.0-or-later",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "WEBcoast\\Recipes\\": "Classes/"
+        }
+    },
+    "require": {
+        "php": "^7.2.0",
+        "typo3/cms-core": "^v10.4.6",
+        "typo3/cms-extbase": "^10.4.6",
+        "typo3/cms-fluid": "^10.4.6"
+    }
+}

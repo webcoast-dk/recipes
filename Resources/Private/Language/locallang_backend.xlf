@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xliff version="1.2">
+    <file source-language="en" product-name="recipes">
+        <body>
+            <trans-unit id="tx_recipes_domain_model_recipe">
+                <source>Recipe</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.tabs.ingredients">
+                <source>Ingredients</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.tabs.preparation">
+                <source>Preparation</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.tabs.nutrition">
+                <source>Nutrition</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.palettes.times">
+                <source>Times</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.palettes.publishing">
+                <source>Publishing</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.difficulty">
+                <source>Difficulty</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.difficulty.very-easy">
+                <source>Very easy</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.difficulty.easy">
+                <source>Easy</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.difficulty.normal">
+                <source>Normal</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.difficulty.hard">
+                <source>Hard</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.difficulty.very-hard">
+                <source>Very hard</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.portions">
+                <source>Portions</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.preparation_time">
+                <source>Preparation time</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.cooking_time">
+                <source>Cooking time</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.total_time">
+                <source>Total time</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.description">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.preparation">
+                <source>Preparation</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.preparation.help">
+                <source>Use this field or write more detailed instructions using steps in the "Preparation" tab.</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.images">
+                <source>Images</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.images.add">
+                <source>Add image</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.tags">
+                <source>Tags</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.components">
+                <source>Components</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.components.add">
+                <source>Add component</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.steps">
+                <source>Preparation steps</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.steps.help">
+                <source>Use the steps to create more detailed instructions, optionally wit images.</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.steps.add">
+                <source>Add preparation step</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.nutritional_values">
+                <source>Nutritional values</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.nutritional_values.add">
+                <source>Add nutritional value</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.visible">
+                <source>Visible</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.publish_date">
+                <source>Publish date</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.publish_until">
+                <source>Publish until</source>
+            </trans-unit>
+
+            <trans-unit id="tx_recipes_domain_model_component">
+                <source>Component</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_component.name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_component.ingredients">
+                <source>Ingredients</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_component.ingredients.add">
+                <source>Add ingredient</source>
+            </trans-unit>
+
+            <trans-unit id="tx_recipes_domain_model_ingredient">
+                <source>Ingredient</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_ingredient.type">
+                <source>Ingredient</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_ingredient.unit">
+                <source>Unit</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_ingredient.unit.weights">
+                <source>Weights</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_ingredient.unit.weight.gram">
+                <source>Gram (g)</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_ingredient.unit.weight.german_pound">
+                <source>German pound (Pfd.)</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_ingredient.unit.weight.kilogram">
+                <source>Kilogram (kg)</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_ingredient.unit.weight.grain">
+                <source>Grain (gr.)</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_ingredient.unit.weight.ounce">
+                <source>Ounce (oz.)</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_ingredient.unit.weight.pound">
+                <source>Pound (lb.)</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_ingredient.unit.volume">
+                <source>Volume</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_ingredient.unit.volume.milliliter">
+                <source>Milliliter (ml)</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_ingredient.unit.volume.centiliter">
+                <source>Centiliter (cl)</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_ingredient.unit.volume.deciliter">
+                <source>Deciliter (dl)</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_ingredient.unit.volume.liter">
+                <source>Liter (l)</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_ingredient.unit.volume.fluid_ounce">
+                <source>Fluid ounce (fl. oz.)</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_ingredient.unit.volume.cup">
+                <source>Cup (cu.)</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_ingredient.unit.other">
+                <source>Other</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_ingredient.unit.other.teaspoon">
+                <source>Teaspoon</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_ingredient.unit.other.tablespoon">
+                <source>Tablespoon</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_ingredient.unit.other.pinch">
+                <source>Pinch</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_ingredient.amount">
+                <source>Amount</source>
+            </trans-unit>
+
+            <trans-unit id="tx_recipes_domain_model_preparation_step">
+                <source>Preparation step</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_preparation_step.name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_preparation_step.description">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_preparation_step.image">
+                <source>Image</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_preparation_step.image.add">
+                <source>Add image</source>
+            </trans-unit>
+
+            <trans-unit id="tx_recipes_domain_model_nutritional_value">
+                <source>Nutritional value</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_nutritional_value.nutrient">
+                <source>Nutrient</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_nutritional_value.amount">
+                <source>Amount</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_nutritional_value.unit">
+                <source>Unit</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_nutritional_value.is_subsidiary">
+                <source>Is subsidiary?</source>
+            </trans-unit>
+
+            <trans-unit id="tx_recipes_domain_model_tag">
+                <source>Tag</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_tag.visible">
+                <source>Visible</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_tag.publish_date">
+                <source>Publish date</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_tag.publish_until">
+                <source>Publish until</source>
+            </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_tag.name">
+                <source>Name</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
