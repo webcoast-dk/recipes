@@ -4,18 +4,19 @@ CREATE TABLE tx_recipes_domain_model_recipe
     description        text                not null,
     images             int(11) unsigned    not null default 0,
     difficulty         tinyint(1)          not null,
-    preparation_time   tinyint(4) unsigned not null,
-    cooking_time       tinyint(4) unsigned not null,
-    total_time         tinyint(4) unsigned not null,
+    preparation_time   time                         default '00:00:00',
+    cooking_time       time                         default '00:00:00',
+    total_time         time                         default '00:00:00',
     components         int(11) unsigned    not null default 0,
     portions           tinyint(2) unsigned not null,
     preparation        text                not null,
     steps              int(11) unsigned    not null default 0,
     nutritional_values int(11) unsigned    not null default 0,
-    tags               int(11) unsigned    not null default 0
+    tags               int(11) unsigned    not null default 0,
+    categories         int(11) unsigned    not null default 0
 );
 
-CREATE TABLE tx_recipes_domain_model_preparation_step
+CREATE TABLE tx_recipes_domain_model_preparationstep
 (
     sorting     int(11)          not null default 0,
     recipe      int(11) unsigned not null default 0,
@@ -41,7 +42,7 @@ CREATE TABLE tx_recipes_domain_model_ingredient
     amount    decimal(5, 2) unsigned null
 );
 
-CREATE TABLE tx_recipes_domain_model_nutritional_value
+CREATE TABLE tx_recipes_domain_model_nutritionalvalue
 (
     recipe        int(11) unsigned       not null default 0,
     nutrient      varchar(200)           not null,
@@ -52,7 +53,8 @@ CREATE TABLE tx_recipes_domain_model_nutritional_value
 
 CREATE TABLE tx_recipes_domain_model_tag
 (
-    name varchar(100) not null
+    name varchar(100) not null,
+    slug varchar(200) not null default ''
 );
 
 CREATE TABLE tx_recipes_domain_model_recipe_2_tag

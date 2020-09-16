@@ -1,0 +1,4 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:recipes/Configuration/PageTSConfig/Includes/content_element_wizard_base.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:recipes/Configuration/PageTSConfig/Includes/content_element_wizard_list.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:recipes/Configuration/PageTSConfig/Includes/content_element_wizard_teaser.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:recipes/Configuration/PageTSConfig/Includes/content_element_wizard_show.tsconfig">

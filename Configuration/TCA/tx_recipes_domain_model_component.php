@@ -71,7 +71,7 @@ return [
         ],
         'l10n_diff' => [
             'config' => [
-                'type' => 'pasthrough',
+                'type' => 'passthrough',
                 'default' => '',
             ]
         ],
@@ -87,7 +87,7 @@ return [
             'label' => $llPrefix . '.name',
             'config' => [
                 'type' => 'input',
-                'eval' => 'required,trim',
+                'eval' => 'trim',
             ]
         ],
         'ingredients' => [

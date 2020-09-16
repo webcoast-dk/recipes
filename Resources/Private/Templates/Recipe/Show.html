@@ -1,0 +1,77 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:r="http://typo3.org/ns/WEBcoast/Recipes/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:render partial="Header/All" arguments="{data: {header: recipe.name}, settings: settings}" />
+<div class="row">
+    <div class="col-sm-6 col-lg-5 order-sm-1">
+        <f:media file="{recipe.images.0.originalResource}" width="483" height="322" alt="{recipe.images.0.alternative}" class="img-fluid" />
+    </div>
+    <div class="col-sm-6 col-lg-7">
+        {recipe.description -> f:format.html()}
+        <div class="row">
+            <f:if condition="{recipe.preparationTime}">
+                <div class="col-sm-4">
+                    <f:translate id="show.preparation_time" /> {recipe.preparationTime -> f:format.date(format: '%H:%M')}
+                </div>
+            </f:if>
+            <f:if condition="{recipe.cookingTime}">
+                <div class="col-sm-4">
+                    <f:translate id="show.cooking_time" /> {recipe.cookingTime -> f:format.date(format: '%H:%M')}
+                </div>
+            </f:if>
+            <f:if condition="{recipe.totalTime}">
+                <div class="col-sm-4">
+                    <f:translate id="show.total_time" /> {recipe.totalTime -> f:format.date(format: '%H:%M')}
+                </div>
+            </f:if>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6 col-lg-5">
+        <h2><f:translate id="show.ingredients" /></h2>
+        <table>
+            <f:for each="{recipe.components}" as="component">
+                <f:if condition="{component.name}">
+                    <tr>
+                        <th colspan="3">{component.name}</th>
+                    </tr>
+                </f:if>
+                <f:for each="{component.ingredients}" as="ingredient">
+                    <tr>
+                        <td><f:if condition="{ingredient.amount} > 0">{ingredient.amount -> r:format.number()}</f:if></td>
+                        <td><f:translate id="show.ingredients.units.{ingredient.unit}" /></td>
+                        <td>{ingredient.type}</td>
+                    </tr>
+                </f:for>
+            </f:for>
+        </table>
+    </div>
+    <div class="col-sm-6 col-lg-7">
+        <h2><f:translate id="show.preparation" /></h2>
+        <f:if condition="{recipe.steps -> f:count()} > 0">
+            <f:then>
+                <ul class="list-group list-group-flush">
+                    <f:for each="{recipe.steps}" as="step">
+                        <li class="list-group-item">
+                            <div class="media">
+                                <f:if condition="{step.image -> f:count()} > 0">
+                                    <f:media file="{step.image.0}" width="300c" height="200c" alt="{step.image.0.alternative}" class="mr-3" />
+                                </f:if>
+                                <div class="media-body">
+                                    <f:if condition="{step.name}">
+                                        <h3>{step.name}</h3>
+                                    </f:if>
+                                    {step.description -> f:format.html()}
+                                </div>
+                            </div>
+                        </li>
+                    </f:for>
+                </ul>
+            </f:then>
+            <f:else>
+                {recipe.preparation -> f:format.html()}
+            </f:else>
+        </f:if>
+    </div>
+</div>
+<f:debug inline="1">{recipe}</f:debug>
+</html>

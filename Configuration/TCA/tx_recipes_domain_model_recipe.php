@@ -113,7 +113,7 @@ return [
         ],
         'l10n_diff' => [
             'config' => [
-                'type' => 'pasthrough',
+                'type' => 'passthrough',
                 'default' => '',
             ]
         ],
@@ -127,7 +127,6 @@ return [
                 ],
                 'defaultLanguageDifferences' => true,
                 'eval' => 'required,trim',
-//                'eval' => 'trim',
                 'max' => 150,
                 'size' => 30,
             ]
@@ -139,9 +138,6 @@ return [
             'config' => [
                 'type' => 'text',
                 'enableRichtext' => true,
-                'behaviour' => [
-//                    'allowLanguageSynchronization' => true
-                ],
                 'defaultLanguageDifferences' => true,
             ]
         ],
@@ -186,6 +182,7 @@ return [
             'l10n_mode' => 'exclude',
             'config' => [
                 'type' => 'input',
+                'dbType' => 'time',
                 'default' => 0,
                 'eval' => 'time',
                 'size' => 10
@@ -197,6 +194,7 @@ return [
             'l10n_mode' => 'exclude',
             'config' => [
                 'type' => 'input',
+                'dbType' => 'time',
                 'default' => 0,
                 'eval' => 'time',
                 'size' => 10
@@ -208,6 +206,7 @@ return [
             'l10n_mode' => 'exclude',
             'config' => [
                 'type' => 'input',
+                'dbType' => 'time',
                 'default' => 0,
                 'eval' => 'time',
                 'size' => 10
@@ -302,7 +301,7 @@ return [
                 ],
                 'foreign_field' => 'recipe',
                 'foreign_sortby' => 'sorting',
-                'foreign_table' => 'tx_recipes_domain_model_preparation_step',
+                'foreign_table' => 'tx_recipes_domain_model_preparationstep',
             ]
         ],
         'nutritional_values' => [
@@ -333,7 +332,7 @@ return [
                 ],
                 'foreign_field' => 'recipe',
                 'foreign_default_sortby' => 'nutrient',
-                'foreign_table' => 'tx_recipes_domain_model_nutritional_value',
+                'foreign_table' => 'tx_recipes_domain_model_nutritionalvalue',
             ]
         ],
         'tags' => [

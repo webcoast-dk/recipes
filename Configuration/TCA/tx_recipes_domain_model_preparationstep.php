@@ -14,6 +14,7 @@ return [
         'hideTable' => true,
         'iconfile' => 'EXT:recipes/Resources/Public/Icons/tx_recipes_domain_model_recipe.svg',
         'label' => 'name',
+        'label_alt' => 'description',
         'languageField' => 'language',
         'rootLevel' => false,
         'searchFields' => 'name,description,preparation',

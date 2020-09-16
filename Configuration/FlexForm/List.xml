@@ -1,0 +1,78 @@
+<T3DataStructure>
+    <ROOT>
+        <type>array</type>
+        <el>
+            <settings.pagination.itemsPerPage>
+                <TCEforms>
+                    <label>LLL:EXT:recipes/Resources/Private/Language/locallang_backend.xlf:plugin.teaser.settings.pagination.itemsPerPage</label>
+                    <config>
+                        <type>input</type>
+                        <default>8</default>
+                        <eval>int</eval>
+                        <size>10</size>
+                    </config>
+                </TCEforms>
+            </settings.pagination.itemsPerPage>
+            <settings.pagination.insertAbove>
+                <TCEforms>
+                    <label>LLL:EXT:recipes/Resources/Private/Language/locallang_backend.xlf:plugin.teaser.settings.pagination.insertAbove</label>
+                    <config>
+                        <type>check</type>
+                        <renderType>checkboxToggle</renderType>
+                        <default>0</default>
+                    </config>
+                </TCEforms>
+            </settings.pagination.insertAbove>
+            <settings.pagination.insertBelow>
+                <TCEforms>
+                    <label>LLL:EXT:recipes/Resources/Private/Language/locallang_backend.xlf:plugin.teaser.settings.pagination.insertBelow</label>
+                    <config>
+                        <type>check</type>
+                        <renderType>checkboxToggle</renderType>
+                        <default>1</default>
+                    </config>
+                </TCEforms>
+            </settings.pagination.insertBelow>
+            <settings.orderBy>
+                <TCEforms>
+                    <label>LLL:EXT:recipes/Resources/Private/Language/locallang_backend.xlf:plugin.teaser.settings.orderBy</label>
+                    <config>
+                        <type>select</type>
+                        <renderType>selectSingle</renderType>
+                        <default>create_date</default>
+                        <items type="array">
+                            <numIndex index="0" type="array">
+                                <numIndex index="0">LLL:EXT:recipes/Resources/Private/Language/locallang_backend.xlf:plugin.teaser.settings.orderBy.create_date</numIndex>
+                                <numIndex index="1">create_date</numIndex>
+                            </numIndex>
+                            <numIndex index="1" type="array">
+                                <numIndex index="0">LLL:EXT:recipes/Resources/Private/Language/locallang_backend.xlf:plugin.teaser.settings.orderBy.last_changed</numIndex>
+                                <numIndex index="1">last_changed</numIndex>
+                            </numIndex>
+                            <numIndex index="2" type="array">
+                                <numIndex index="0">LLL:EXT:recipes/Resources/Private/Language/locallang_backend.xlf:plugin.teaser.settings.orderBy.name</numIndex>
+                                <numIndex index="1">name</numIndex>
+                            </numIndex>
+                        </items>
+                    </config>
+                </TCEforms>
+            </settings.orderBy>
+            <settings.detailPid>
+                <TCEforms>
+                    <label>LLL:EXT:recipes/Resources/Private/Language/locallang_backend.xlf:plugin.teaser.settings.detailPid</label>
+                    <config>
+                        <type>group</type>
+                        <internal_type>db</internal_type>
+                        <allowed>pages</allowed>
+                        <suggestOptions>
+                            <default>
+                                <additionalSearchFields>nav_title, title</additionalSearchFields>
+                                <addWhere>AND pages.doktype = 1</addWhere>
+                            </default>
+                        </suggestOptions>
+                    </config>
+                </TCEforms>
+            </settings.detailPid>
+        </el>
+    </ROOT>
+</T3DataStructure>

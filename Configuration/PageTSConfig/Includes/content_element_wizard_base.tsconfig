@@ -1,0 +1,8 @@
+mod.wizards.newContentElement.wizardItems {
+    recipes {
+        header = LLL:EXT:recipes/Resources/Private/Language/locallang_backend.xlf:plugin.header
+        elements {
+        }
+        show = *
+    }
+}

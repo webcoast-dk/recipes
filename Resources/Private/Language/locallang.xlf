@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xliff version="1.2">
+    <file source-language="en" product-name="recipes">
+        <body>
+            <trans-unit id="link.moreRecipes">
+                <source>More recipes</source>
+            </trans-unit>
+
+            <trans-unit id="show.preparation_time">
+                <source>Preparation:</source>
+            </trans-unit>
+            <trans-unit id="show.cooking_time">
+                <source>Cooking:</source>
+            </trans-unit>
+            <trans-unit id="show.total_time">
+                <source>Total:</source>
+            </trans-unit>
+            <trans-unit id="show.difficulty">
+                <source>Difficulty:</source>
+            </trans-unit>
+            <trans-unit id="show.difficulty.-2">
+                <source>Very easy</source>
+            </trans-unit>
+            <trans-unit id="show.difficulty.-1">
+                <source>Easy</source>
+            </trans-unit>
+            <trans-unit id="show.difficulty.0">
+                <source>Normal</source>
+            </trans-unit>
+            <trans-unit id="show.difficulty.1">
+                <source>Hard</source>
+            </trans-unit>
+            <trans-unit id="show.difficulty.2">
+                <source>Very hard</source>
+            </trans-unit>
+            <trans-unit id="show.ingredients">
+                <source>Ingredients</source>
+            </trans-unit>
+            <trans-unit id="show.ingredients.units.gram">
+                <source>g</source>
+            </trans-unit>
+            <trans-unit id="show.ingredients.units.kilogram">
+                <source>kg</source>
+            </trans-unit>
+            <trans-unit id="show.ingredients.units.gram">
+                <source>g</source>
+            </trans-unit>
+            <trans-unit id="show.ingredients.units.german_pound">
+                <source>Pfd.</source>
+            </trans-unit>
+            <trans-unit id="show.ingredients.units.kilogram">
+                <source>kg</source>
+            </trans-unit>
+            <trans-unit id="show.ingredients.units.grain">
+                <source>gr.</source>
+            </trans-unit>
+            <trans-unit id="show.ingredients.units.ounce">
+                <source>oz.</source>
+            </trans-unit>
+            <trans-unit id="show.ingredients.units.pound">
+                <source>lb.</source>
+            </trans-unit>
+            <trans-unit id="show.ingredients.units.milliliter">
+                <source>ml</source>
+            </trans-unit>
+            <trans-unit id="show.ingredients.units.centiliter">
+                <source>cl</source>
+            </trans-unit>
+            <trans-unit id="show.ingredients.units.deciliter">
+                <source>dl</source>
+            </trans-unit>
+            <trans-unit id="show.ingredients.units.liter">
+                <source>l</source>
+            </trans-unit>
+            <trans-unit id="show.ingredients.units.fluid_ounce">
+                <source>fl. oz.</source>
+            </trans-unit>
+            <trans-unit id="show.ingredients.units.cup">
+                <source>cu.</source>
+            </trans-unit>
+            <trans-unit id="show.ingredients.units.teaspoon">
+                <source>tsp.</source>
+            </trans-unit>
+            <trans-unit id="show.ingredients.units.tablespoon">
+                <source>tbsp.</source>
+            </trans-unit>
+            <trans-unit id="show.ingredients.units.pinch">
+                <source>pn.</source>
+            </trans-unit>
+            <trans-unit id="show.preparation">
+                <source>Preparation</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,14 @@
+mod.wizards.newContentElement.wizardItems {
+    recipes {
+        elements {
+            recipes_show {
+                iconIdentifier = ext-recipes-plugin
+                title = LLL:EXT:recipes/Resources/Private/Language/locallang_backend.xlf:plugin.show
+                description = LLL:EXT:recipes/Resources/Private/Language/locallang_backend.xlf:plugin.show.description
+                tt_content_defValues {
+                    CType = recipes_show
+                }
+            }
+        }
+    }
+}

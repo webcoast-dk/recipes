@@ -229,6 +229,68 @@
             <trans-unit id="tx_recipes_domain_model_tag.name">
                 <source>Name</source>
             </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_tag.slug">
+                <source>Slug</source>
+            </trans-unit>
+
+            <trans-unit id="tt_content.tabs.record_storage">
+                <source>Record storage</source>
+            </trans-unit>
+
+            <trans-unit id="plugin.header">
+                <source>Recipes</source>
+            </trans-unit>
+            <trans-unit id="plugin.teaser">
+                <source>Teaser</source>
+            </trans-unit>
+            <trans-unit id="plugin.teaser.description">
+                <source>Display a fixed number of recipes without pagination</source>
+            </trans-unit>
+            <trans-unit id="plugin.teaser.settings.maxItems">
+                <source>Show # items</source>
+            </trans-unit>
+            <trans-unit id="plugin.teaser.settings.pagination.itemsPerPage">
+                <source>Items per page</source>
+            </trans-unit>
+            <trans-unit id="plugin.teaser.settings.pagination.insertAbove">
+                <source>Show pagination above</source>
+            </trans-unit>
+            <trans-unit id="plugin.teaser.settings.pagination.insertBelow">
+                <source>Show pagination below</source>
+            </trans-unit>
+            <trans-unit id="plugin.teaser.settings.orderBy">
+                <source>Ordering</source>
+            </trans-unit>
+            <trans-unit id="plugin.teaser.settings.orderBy.random">
+                <source>Random</source>
+            </trans-unit>
+            <trans-unit id="plugin.teaser.settings.orderBy.create_date">
+                <source>Create date (newest first)</source>
+            </trans-unit>
+            <trans-unit id="plugin.teaser.settings.orderBy.last_changed">
+                <source>Last changed (newest first)</source>
+            </trans-unit>
+            <trans-unit id="plugin.teaser.settings.orderBy.name">
+                <source>Name (a -&gt; z)</source>
+            </trans-unit>
+            <trans-unit id="plugin.teaser.settings.listPid">
+                <source>List page</source>
+            </trans-unit>
+            <trans-unit id="plugin.teaser.settings.detailPid">
+                <source>Detail page</source>
+            </trans-unit>
+            <trans-unit id="plugin.list">
+                <source>List</source>
+            </trans-unit>
+            <trans-unit id="plugin.list.description">
+                <source>Display all recipes with pagination (if necessary)</source>
+            </trans-unit>
+            <trans-unit id="plugin.single">
+                <source>Single</source>
+            </trans-unit>
+            <trans-unit id="plugin.single.description">
+                <source>Display a single recipe with all its information.</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -85,6 +85,17 @@ return [
                 'type' => 'input',
                 'eval' => 'required,trim',
             ]
+        ],
+        'slug' => [
+            'exclude' => true,
+            'label' => $llPrefix . '.slug',
+            'config' => [
+                'type' => 'slug',
+                'eval' => 'uniqueInSite',
+                'generatorOptions' => [
+                    'fields' => ['name']
+                ]
+            ]
         ]
     ],
     'palettes' => [
@@ -95,7 +106,7 @@ return [
     ],
     'types' => [
         '0' => [
-            'showitem' => 'name, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, --palette--;;publish_times, fe_group'
+            'showitem' => 'name, slug, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, --palette--;;publish_times, fe_group'
         ]
     ]
 ];

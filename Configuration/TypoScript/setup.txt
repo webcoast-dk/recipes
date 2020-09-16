@@ -1,0 +1,21 @@
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:recipes/Configuration/TypoScript/Includes" extensions="typoscript">
+
+plugin.tx_recipes {
+    view {
+        templateRootPaths {
+            0 = EXT:recipes/Resources/Private/Templates/
+        }
+
+        partialRootPaths {
+            0 = EXT:fluid_styled_content/Resources/Private/Partials/
+            10 = EXT:recipes/Resources/Private/Partials/
+        }
+    }
+
+    settings < lib.contentElement.settings
+    settings {
+        pagination {
+            maximumNumberOfLinks = 5
+        }
+    }
+}

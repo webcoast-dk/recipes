@@ -71,7 +71,7 @@ return [
         ],
         'l10n_diff' => [
             'config' => [
-                'type' => 'pasthrough',
+                'type' => 'passthrough',
                 'default' => '',
             ]
         ],

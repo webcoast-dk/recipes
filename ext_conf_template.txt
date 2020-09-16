@@ -1,0 +1,2 @@
+# cat=Plugin; type=boolean; label=Combined List/Show plugin: Use one plugin to render list and show actions instead of two separate plugins
+enableCombinedPlugin = 1
