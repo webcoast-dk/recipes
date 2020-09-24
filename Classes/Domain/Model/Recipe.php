@@ -28,17 +28,17 @@ class Recipe extends AbstractEntity
     protected $difficulty;
 
     /**
-     * @var \DateTime
+     * @var \DateTime|null
      */
     protected $preparationTime;
 
     /**
-     * @var \DateTime
+     * @var \DateTime|null
      */
     protected $cookingTime;
 
     /**
-     * @var \DateTime
+     * @var \DateTime|null
      */
     protected $totalTime;
 
@@ -111,7 +111,7 @@ class Recipe extends AbstractEntity
     /**
      * @return \DateTime
      */
-    public function getPreparationTime(): \DateTime
+    public function getPreparationTime(): ?\DateTime
     {
         return $this->preparationTime;
     }
@@ -119,7 +119,7 @@ class Recipe extends AbstractEntity
     /**
      * @return \DateTime
      */
-    public function getCookingTime(): \DateTime
+    public function getCookingTime(): ?\DateTime
     {
         return $this->cookingTime;
     }
@@ -127,7 +127,7 @@ class Recipe extends AbstractEntity
     /**
      * @return \DateTime
      */
-    public function getTotalTime(): \DateTime
+    public function getTotalTime(): ?\DateTime
     {
         return $this->totalTime;
     }
