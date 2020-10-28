@@ -23,6 +23,9 @@
             <trans-unit id="tx_recipes_domain_model_recipe.name">
                 <source>Name</source>
             </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.slug">
+                <source>Slug (URL path segment)</source>
+            </trans-unit>
             <trans-unit id="tx_recipes_domain_model_recipe.difficulty">
                 <source>Difficulty</source>
             </trans-unit>

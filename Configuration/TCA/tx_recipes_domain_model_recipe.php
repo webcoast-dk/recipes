@@ -131,6 +131,18 @@ return [
                 'size' => 30,
             ]
         ],
+        'slug' => [
+            'exclude' => true,
+            'label' => $llPrefix . '.slug',
+            'config' => [
+                'type' => 'slug',
+                'eval' => 'uniqueInSite',
+                'size' => 50,
+                'generatorOptions' => [
+                    'fields' => ['name']
+                ]
+            ]
+        ],
         'description' => [
             'exclude' => true,
             'label' => $llPrefix . '.description',
@@ -234,8 +246,6 @@ return [
                         'delete' => true,
                         'localize' => true
                     ],
-//                    'headerThumbnail' => true,
-//                    'fileUploadAllowed' => false,
                 ],
                 'behavior' => [
                     'allowLanguageSynchronization' => true
@@ -253,7 +263,6 @@ return [
             'l10n_mode' => 'exclude',
             'config' => [
                 'type' => 'input',
-//                'eval' => 'required,int',
                 'eval' => 'int',
                 'size' => 5
             ]
@@ -265,9 +274,6 @@ return [
             'config' => [
                 'type' => 'text',
                 'enableRichtext' => true,
-                'behaviour' => [
-//                    'allowLanguageSynchronization' => true
-                ],
                 'defaultLanguageDifferences' => true,
             ]
         ],
@@ -328,7 +334,6 @@ return [
                         'localize' => true
                     ],
                     'headerThumbnail' => true,
-//                    'fileUploadAllowed' => false,
                 ],
                 'foreign_field' => 'recipe',
                 'foreign_default_sortby' => 'nutrient',
@@ -347,8 +352,6 @@ return [
                     'title' => $llPrefix . '.tags.add'
                 ],
                 'foreign_table' => 'tx_recipes_domain_model_tag',
-//                'foreign_default_sortby' => 'name ASC',
-//                'foreign_table_where' => 'AND {#pid} = ###CURRENT_PID### ORDER BY {#name} ASC',
                 'MM' => 'tx_recipes_domain_model_recipe_2_tag',
             ]
         ]
@@ -371,7 +374,7 @@ return [
     ],
     'types' => [
         '0' => [
-            'showitem' => '--palette--;;name, --palette--;;times, description, preparation, images, tags, --div--;' . $llPrefix . '.tabs.ingredients, components, --div--;' . $llPrefix . '.tabs.preparation, steps, --div--;' .$llPrefix . '.tabs.nutrition, nutritional_values, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language, --palette--;;language, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, --palette--;;publishing, fe_group'
+            'showitem' => '--palette--;;name, slug, --palette--;;times, description, preparation, images, tags, --div--;' . $llPrefix . '.tabs.ingredients, components, --div--;' . $llPrefix . '.tabs.preparation, steps, --div--;' .$llPrefix . '.tabs.nutrition, nutritional_values, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language, --palette--;;language, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, --palette--;;publishing, fe_group'
         ]
     ]
 ];

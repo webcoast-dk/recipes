@@ -1,6 +1,7 @@
-CREATE TABLE tx_recipes_domain_model_recipe
+create table tx_recipes_domain_model_recipe
 (
     name               varchar(150)        not null default '',
+    slug               varchar(200)        not null default '',
     description        text                not null,
     images             int(11) unsigned    not null default 0,
     difficulty         tinyint(1)          not null,
@@ -16,7 +17,7 @@ CREATE TABLE tx_recipes_domain_model_recipe
     categories         int(11) unsigned    not null default 0
 );
 
-CREATE TABLE tx_recipes_domain_model_preparationstep
+create table tx_recipes_domain_model_preparationstep
 (
     sorting     int(11)          not null default 0,
     recipe      int(11) unsigned not null default 0,
@@ -25,7 +26,7 @@ CREATE TABLE tx_recipes_domain_model_preparationstep
     image       int(11)          not null default 0
 );
 
-CREATE TABLE tx_recipes_domain_model_component
+create table tx_recipes_domain_model_component
 (
     sorting     int(11)          not null default 0,
     recipe      int(11) unsigned not null default 0,
@@ -33,7 +34,7 @@ CREATE TABLE tx_recipes_domain_model_component
     ingredients int(11)          not null default 0
 );
 
-CREATE TABLE tx_recipes_domain_model_ingredient
+create table tx_recipes_domain_model_ingredient
 (
     sorting   int(11)                not null default 0,
     component int(11) unsigned       not null default 0,
@@ -42,7 +43,7 @@ CREATE TABLE tx_recipes_domain_model_ingredient
     amount    decimal(5, 2) unsigned null
 );
 
-CREATE TABLE tx_recipes_domain_model_nutritionalvalue
+create table tx_recipes_domain_model_nutritionalvalue
 (
     recipe        int(11) unsigned       not null default 0,
     nutrient      varchar(200)           not null,
@@ -51,13 +52,13 @@ CREATE TABLE tx_recipes_domain_model_nutritionalvalue
     amount        decimal(5, 2) unsigned not null
 );
 
-CREATE TABLE tx_recipes_domain_model_tag
+create table tx_recipes_domain_model_tag
 (
     name varchar(100) not null,
     slug varchar(200) not null default ''
 );
 
-CREATE TABLE tx_recipes_domain_model_recipe_2_tag
+create table tx_recipes_domain_model_recipe_2_tag
 (
     uid_local   int(10) unsigned not null default 0,
     uid_foreign int(10) unsigned not null default 0,
