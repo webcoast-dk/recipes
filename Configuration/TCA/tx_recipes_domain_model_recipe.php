@@ -153,6 +153,26 @@ return [
                 'defaultLanguageDifferences' => true,
             ]
         ],
+        'meta_description' => [
+            'exclude' => true,
+            'label' => $llPrefix . '.meta_description',
+            'config' => [
+                'type' => 'text',
+                'rows' => 5,
+                'cols' => 40,
+                'max' => 250,
+                'eval' => 'trim'
+            ]
+        ],
+        'meta_keywords' => [
+            'exclude' => true,
+            'label' => $llPrefix . '.meta_keywords',
+            'config' => [
+                'type' => 'input',
+                'max' => 250,
+                'eval' => 'trim'
+            ]
+        ],
         'images' => [
             'exclude' => true,
             'label' => $llPrefix . '.images',
@@ -374,7 +394,13 @@ return [
     ],
     'types' => [
         '0' => [
-            'showitem' => '--palette--;;name, slug, --palette--;;times, description, preparation, images, tags, --div--;' . $llPrefix . '.tabs.ingredients, components, --div--;' . $llPrefix . '.tabs.preparation, steps, --div--;' .$llPrefix . '.tabs.nutrition, nutritional_values, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language, --palette--;;language, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, --palette--;;publishing, fe_group'
+            'showitem' => '--palette--;;name, slug, --palette--;;times, description, preparation, images, tags,' .
+                '--div--;' . $llPrefix . '.tabs.ingredients, components,' .
+                '--div--;' . $llPrefix . '.tabs.preparation, steps,' .
+                '--div--;' . $llPrefix . '.tabs.nutrition, nutritional_values,' .
+                '--div--;' . $llPrefix . '.tabs.meta_data, meta_description, meta_keywords,' .
+                '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language, --palette--;;language,
+                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, --palette--;;publishing, fe_group'
         ]
     ]
 ];

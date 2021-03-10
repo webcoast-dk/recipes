@@ -17,6 +17,16 @@ class Recipe extends AbstractEntity
     protected $description;
 
     /**
+     * @var string
+     */
+    protected $metaDescription;
+
+    /**
+     * @var string
+     */
+    protected $metaKeywords;
+
+    /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
      * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
      */
@@ -90,6 +100,22 @@ class Recipe extends AbstractEntity
     public function getDescription(): string
     {
         return $this->description;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMetaDescription(): string
+    {
+        return $this->metaDescription;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMetaKeywords(): string
+    {
+        return $this->metaKeywords;
     }
 
     /**

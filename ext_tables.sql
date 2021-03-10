@@ -1,66 +1,68 @@
-create table tx_recipes_domain_model_recipe
+CREATE TABLE tx_recipes_domain_model_recipe
 (
-    name               varchar(150)        not null default '',
-    slug               varchar(200)        not null default '',
-    description        text                not null,
-    images             int(11) unsigned    not null default 0,
-    difficulty         tinyint(1)          not null,
-    preparation_time   time                         default '00:00:00',
-    cooking_time       time                         default '00:00:00',
-    total_time         time                         default '00:00:00',
-    components         int(11) unsigned    not null default 0,
-    portions           tinyint(2) unsigned not null,
-    preparation        text                not null,
-    steps              int(11) unsigned    not null default 0,
-    nutritional_values int(11) unsigned    not null default 0,
-    tags               int(11) unsigned    not null default 0,
-    categories         int(11) unsigned    not null default 0
+    name               VARCHAR(150)        NOT NULL DEFAULT '',
+    slug               VARCHAR(200)        NOT NULL DEFAULT '',
+    description        TEXT                NOT NULL,
+    meta_description   VARCHAR(250)        NOT NULL,
+    meta_keywords      VARCHAR(250)        NOT NULL,
+    images             INT(11) UNSIGNED    NOT NULL DEFAULT 0,
+    difficulty         TINYINT(1)          NOT NULL,
+    preparation_time   TIME                         DEFAULT '00:00:00',
+    cooking_time       TIME                         DEFAULT '00:00:00',
+    total_time         TIME                         DEFAULT '00:00:00',
+    components         INT(11) UNSIGNED    NOT NULL DEFAULT 0,
+    portions           TINYINT(2) UNSIGNED NOT NULL,
+    preparation        TEXT                NOT NULL,
+    steps              INT(11) UNSIGNED    NOT NULL DEFAULT 0,
+    nutritional_values INT(11) UNSIGNED    NOT NULL DEFAULT 0,
+    tags               INT(11) UNSIGNED    NOT NULL DEFAULT 0,
+    categories         INT(11) UNSIGNED    NOT NULL DEFAULT 0
 );
 
-create table tx_recipes_domain_model_preparationstep
+CREATE TABLE tx_recipes_domain_model_preparationstep
 (
-    sorting     int(11)          not null default 0,
-    recipe      int(11) unsigned not null default 0,
-    name        varchar(150)     not null,
-    description text             not null,
-    image       int(11)          not null default 0
+    sorting     INT(11)          NOT NULL DEFAULT 0,
+    recipe      INT(11) UNSIGNED NOT NULL DEFAULT 0,
+    name        VARCHAR(150)     NOT NULL,
+    description TEXT             NOT NULL,
+    image       INT(11)          NOT NULL DEFAULT 0
 );
 
-create table tx_recipes_domain_model_component
+CREATE TABLE tx_recipes_domain_model_component
 (
-    sorting     int(11)          not null default 0,
-    recipe      int(11) unsigned not null default 0,
-    name        varchar(150)     not null default '',
-    ingredients int(11)          not null default 0
+    sorting     INT(11)          NOT NULL DEFAULT 0,
+    recipe      INT(11) UNSIGNED NOT NULL DEFAULT 0,
+    name        VARCHAR(150)     NOT NULL DEFAULT '',
+    ingredients INT(11)          NOT NULL DEFAULT 0
 );
 
-create table tx_recipes_domain_model_ingredient
+CREATE TABLE tx_recipes_domain_model_ingredient
 (
-    sorting   int(11)                not null default 0,
-    component int(11) unsigned       not null default 0,
-    type      varchar(200)           not null,
-    unit      varchar(50)            not null,
-    amount    decimal(5, 2) unsigned null
+    sorting   INT(11)                NOT NULL DEFAULT 0,
+    component INT(11) UNSIGNED       NOT NULL DEFAULT 0,
+    type      VARCHAR(200)           NOT NULL,
+    unit      VARCHAR(50)            NOT NULL,
+    amount    DECIMAL(5, 2) UNSIGNED NULL
 );
 
-create table tx_recipes_domain_model_nutritionalvalue
+CREATE TABLE tx_recipes_domain_model_nutritionalvalue
 (
-    recipe        int(11) unsigned       not null default 0,
-    nutrient      varchar(200)           not null,
-    is_subsidiary tinyint(1)             not null,
-    unit          varchar(50)            not null,
-    amount        decimal(5, 2) unsigned not null
+    recipe        INT(11) UNSIGNED       NOT NULL DEFAULT 0,
+    nutrient      VARCHAR(200)           NOT NULL,
+    is_subsidiary TINYINT(1)             NOT NULL,
+    unit          VARCHAR(50)            NOT NULL,
+    amount        DECIMAL(5, 2) UNSIGNED NOT NULL
 );
 
-create table tx_recipes_domain_model_tag
+CREATE TABLE tx_recipes_domain_model_tag
 (
-    name varchar(100) not null,
-    slug varchar(200) not null default ''
+    name VARCHAR(100) NOT NULL,
+    slug VARCHAR(200) NOT NULL DEFAULT ''
 );
 
-create table tx_recipes_domain_model_recipe_2_tag
+CREATE TABLE tx_recipes_domain_model_recipe_2_tag
 (
-    uid_local   int(10) unsigned not null default 0,
-    uid_foreign int(10) unsigned not null default 0,
-    sorting     int(11)          not null default 0
+    uid_local   INT(10) UNSIGNED NOT NULL DEFAULT 0,
+    uid_foreign INT(10) UNSIGNED NOT NULL DEFAULT 0,
+    sorting     INT(11)          NOT NULL DEFAULT 0
 );
