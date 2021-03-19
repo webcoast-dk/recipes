@@ -153,6 +153,15 @@ return [
                 'defaultLanguageDifferences' => true,
             ]
         ],
+        'meta_title' => [
+            'exclude' => true,
+            'label' => $llPrefix . '.meta_title',
+            'config' => [
+                'type' => 'input',
+                'max' => 150,
+                'eval' => 'trim'
+            ]
+        ],
         'meta_description' => [
             'exclude' => true,
             'label' => $llPrefix . '.meta_description',
@@ -398,7 +407,7 @@ return [
                 '--div--;' . $llPrefix . '.tabs.ingredients, components,' .
                 '--div--;' . $llPrefix . '.tabs.preparation, steps,' .
                 '--div--;' . $llPrefix . '.tabs.nutrition, nutritional_values,' .
-                '--div--;' . $llPrefix . '.tabs.meta_data, meta_description, meta_keywords,' .
+                '--div--;' . $llPrefix . '.tabs.meta_data, meta_title, meta_description, meta_keywords,' .
                 '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language, --palette--;;language,
                  --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, --palette--;;publishing, fe_group'
         ]

@@ -3,6 +3,7 @@ CREATE TABLE tx_recipes_domain_model_recipe
     name               VARCHAR(150)        NOT NULL DEFAULT '',
     slug               VARCHAR(200)        NOT NULL DEFAULT '',
     description        TEXT                NOT NULL,
+    meta_title         VARCHAR(150)        NOT NULL,
     meta_description   VARCHAR(250)        NOT NULL,
     meta_keywords      VARCHAR(250)        NOT NULL,
     images             INT(11) UNSIGNED    NOT NULL DEFAULT 0,

@@ -19,6 +19,11 @@ class Recipe extends AbstractEntity
     /**
      * @var string
      */
+    protected $metaTitle;
+
+    /**
+     * @var string
+     */
     protected $metaDescription;
 
     /**
@@ -100,6 +105,14 @@ class Recipe extends AbstractEntity
     public function getDescription(): string
     {
         return $this->description;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMetaTitle(): string
+    {
+        return $this->metaTitle;
     }
 
     /**
