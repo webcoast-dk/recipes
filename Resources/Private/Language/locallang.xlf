@@ -33,6 +33,9 @@
             <trans-unit id="show.difficulty.2">
                 <source>Very hard</source>
             </trans-unit>
+            <trans-unit id="show.portions">
+                <source>Portions</source>
+            </trans-unit>
             <trans-unit id="show.ingredients">
                 <source>Ingredients</source>
             </trans-unit>
