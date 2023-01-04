@@ -1,18 +1,13 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:render partial="Header/All" arguments="{_all}" />
+<f:if condition="{settings.pagination.insertAbove}">
+    <f:render partial="Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator, settings: settings}" />
+</f:if>
 
-<f:if condition="{settings.pagination.insertAbove} || {settings.pagination.insertBelow}">
-    <f:then>
-        <f:widget.paginate as="paginatedRecipes" objects="{recipes}" configuration="{settings.pagination}">
-            <f:alias map="{recipesForList: paginatedRecipes}">
-                <f:render partial="List" arguments="{_all}" />
-            </f:alias>
-        </f:widget.paginate>
-    </f:then>
-    <f:else>
-        <f:alias map="{recipesForList: recipes}">
-            <f:render partial="List" arguments="{_all}" />
-        </f:alias>
-    </f:else>
+<f:alias map="{recipesForList: pagination.paginator.paginatedItems}">
+    <f:render partial="List" arguments="{_all}" />
+</f:alias>
+
+<f:if condition="{settings.pagination.insertBelow}">
+    <f:render partial="Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator, settings: settings}" />
 </f:if>
 </html>

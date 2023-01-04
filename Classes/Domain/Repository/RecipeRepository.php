@@ -39,10 +39,8 @@ class RecipeRepository extends Repository
         /** @var Query $query */
         $query = $this->createQuery();
         $queryBuilder = $this->queryParser->convertQueryToDoctrineQueryBuilder($query);
-//        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable($this->tableName);
         $queryBuilder->select('*')
             ->addSelectLiteral('rand() as random_order')
-//            ->from($this->tableName)
             ->setRestrictions(GeneralUtility::makeInstance(FrontendRestrictionContainer::class));
 
         if (isset($options['limit']) && $options['limit'] > 0) {

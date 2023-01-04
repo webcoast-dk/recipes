@@ -1,0 +1,84 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{paginator.numberOfPages} > 1">
+    <nav class="pagination" role="doc-pagelist">
+        <ul class="pagination__list">
+            <li class="pagination__item pagination__item--previous">
+                <f:if condition="{pagination.previousPageNumber}">
+                    <f:then>
+                        <f:if condition="{pagination.previousPageNumber} > 1">
+                            <f:then>
+                                <f:link.action action="{actionName}" addQueryStringMethod="GET" arguments="{currentPage: pagination.previousPageNumber}" class="pagination__link">
+                                    <f:if condition="{settings.pagination.translatePrevNext}">
+                                        <f:then>
+                                            <f:translate key="widget.pagination.previous"/>
+                                        </f:then>
+                                        <f:else>&nbsp;</f:else>
+                                    </f:if>
+                                </f:link.action>
+                            </f:then>
+                            <f:else>
+                                <f:link.page addQueryStringMethod="GET" class="pagination__link">
+                                    <f:if condition="{settings.pagination.translatePrevNext}">
+                                        <f:then>
+                                            <f:translate key="widget.pagination.previous"/>
+                                        </f:then>
+                                        <f:else>&nbsp;</f:else>
+                                    </f:if>
+                                </f:link.page>
+                            </f:else>
+                        </f:if>
+                    </f:then>
+                </f:if>
+            </li>
+            <f:if condition="{pagination.displayRangeStart} > 1">
+                <li class="pagination__item">
+                    <f:link.page addQueryStringMethod="GET" class="pagination__link">1</f:link.page>
+                </li>
+            </f:if>
+            <f:if condition="{pagination.hasLessPages}">
+                <li class="pagination__item pagination__item--more">…</li>
+            </f:if>
+            <f:for each="{pagination.allPageNumbers}" as="page">
+                <f:if condition="{page} == {paginator.currentPageNumber}">
+                    <f:then>
+                        <li class="pagination__item pagination__item--current">{page}</li>
+                    </f:then>
+                    <f:else>
+                        <li class="pagination__item">
+                            <f:if condition="{page} > 1">
+                                <f:then>
+                                    <f:link.action action="{actionName}" addQueryStringMethod="GET" arguments="{currentPage: page}" class="pagination__link">{page}</f:link.action>
+                                </f:then>
+                                <f:else>
+                                    <f:link.page addQueryStringMethod="GET" class="pagination__link">{page}</f:link.page>
+                                </f:else>
+                            </f:if>
+                        </li>
+                    </f:else>
+                </f:if>
+            </f:for>
+            <f:if condition="{pagination.hasMorePages}">
+                <li class="pagination__item pagination__item--more">…</li>
+            </f:if>
+            <f:if condition="{pagination.displayRangeEnd} < {paginator.numberOfPages}">
+                <li class="pagination__item">
+                    <f:link.action action="{actionName}" addQueryStringMethod="GET" arguments="{currentPage: paginator.numberOfPages}" class="pagination__link">{paginator.numberOfPages}</f:link.action>
+                </li>
+            </f:if>
+            <f:if condition="{pagination.nextPageNumber}">
+                <li class="pagination__item pagination__item--next">
+                    <f:link.action action="{actionName}" addQueryStringMethod="GET" arguments="{currentPage: pagination.nextPageNumber}" class="pagination__link">
+                        <f:if condition="{settings.pagination.translatePrevNext}">
+                            <f:then>
+                                <f:translate key="widget.pagination.next"/>
+                            </f:then>
+                            <f:else>&nbsp;</f:else>
+                        </f:if>
+                    </f:link.action>
+                </li>
+            </f:if>
+        </ul>
+    </nav>
+</f:if>
+</html>
