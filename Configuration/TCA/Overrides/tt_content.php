@@ -4,14 +4,14 @@ $llPrefix = 'LLL:EXT:recipes/Resources/Private/Language/locallang_backend.xlf:';
 
 TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItemGroup('tt_content', 'CType', 'recipes', $llPrefix . 'plugin.header', 'before:special');
 
-TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin('WEBcoast.Recipes', 'Teaser', $llPrefix . 'plugin.teaser', null, 'recipes');
-TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin('WEBcoast.Recipes', 'List', $llPrefix . 'plugin.list', null, 'recipes');
+TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin('Recipes', 'Teaser', $llPrefix . 'plugin.teaser', null, 'recipes');
+TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin('Recipes', 'List', $llPrefix . 'plugin.list', null, 'recipes');
 
 $GLOBALS['TCA']['tt_content']['types']['recipes_teaser'] = $GLOBALS['TCA']['tt_content']['types']['1'];
 $GLOBALS['TCA']['tt_content']['types']['recipes_list'] = $GLOBALS['TCA']['tt_content']['types']['1'];
 
 if (!TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class)->get('recipes', 'enableCombinedPlugin')) {
-    TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin('WEBcoast.Recipes', 'Single', $llPrefix . 'plugin.single', null, 'recipes');
+    TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin('Recipes', 'Single', $llPrefix . 'plugin.single', null, 'recipes');
     $GLOBALS['TCA']['tt_content']['types']['recipes_single'] = $GLOBALS['TCA']['tt_content']['types']['1'];
 }
 

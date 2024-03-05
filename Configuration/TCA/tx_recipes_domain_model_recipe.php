@@ -185,27 +185,25 @@ return [
         'images' => [
             'exclude' => true,
             'label' => $llPrefix . '.images',
-            'config' => TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-                'image',
-                [
-                    'appearance' => [
-                        'createNewRelationLinkTitle' => $llPrefix . '.images.add',
-                        'fileUploadAllowed' => false
-                    ],
-                    'behaviour' => [
-                        'allowLanguageSynchronization' => true
-                    ],
-                    'minitems' => 1,
-                    'overrideChildTca' => [
-                        'types' => [
-                            \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
-                                'showitem' => '--palette--;;imageoverlayPalette, --palette--;;filePalette'
-                            ]
+            'config' => [
+                'type' => 'file',
+                'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
+                'appearance' => [
+                    'createNewRelationLinkTitle' => $llPrefix . '.images.add',
+                    'fileUploadAllowed' => false
+                ],
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true
+                ],
+                'minitems' => 1,
+                'overrideChildTca' => [
+                    'types' => [
+                        \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                            'showitem' => '--palette--;;imageoverlayPalette, --palette--;;filePalette'
                         ]
                     ]
                 ],
-                $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
-            )
+            ],
         ],
         'difficulty' => [
             'exclude' => true,
@@ -390,7 +388,15 @@ return [
                 'foreign_table' => 'tx_recipes_domain_model_tag',
                 'MM' => 'tx_recipes_domain_model_recipe_2_tag',
             ]
-        ]
+        ],
+        'categories' => [
+            'exclude' => true,
+            'label' => $llPrefix . '.categories',
+            'l10n_mode' => 'exclude',
+            'config' => [
+                'type' => 'category',
+            ],
+        ],
     ],
     'palettes' => [
         'name' => [

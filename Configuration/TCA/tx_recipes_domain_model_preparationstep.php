@@ -64,26 +64,24 @@ return [
         'image' => [
             'exclude' => true,
             'label' => $llPrefix . '.image',
-            'config' => TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-                'image',
-                [
-                    'appearance' => [
-                        'createNewRelationLinkTitle' => $llPrefix . '.image.add',
-                        'fileUploadAllowed' => false
-                    ],
-                    'behaviour' => [
-                        'allowLanguageSynchronization' => true
-                    ],
-                    'overrideChildTca' => [
-                        'types' => [
-                            \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
-                                'showitem' => '--palette--;;imageoverlayPalette, --palette--;;filePalette'
-                            ]
+            'config' => [
+                'type' => 'file',
+                'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
+                'appearance' => [
+                    'createNewRelationLinkTitle' => $llPrefix . '.image.add',
+                    'fileUploadAllowed' => false
+                ],
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true
+                ],
+                'overrideChildTca' => [
+                    'types' => [
+                        \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                            'showitem' => '--palette--;;imageoverlayPalette, --palette--;;filePalette'
                         ]
                     ]
-                ],
-                $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
-            )
+                ]
+            ],
         ]
     ],
     'types' => [

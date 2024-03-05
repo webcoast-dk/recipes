@@ -116,6 +116,9 @@
             <trans-unit id="tx_recipes_domain_model_recipe.publish_until">
                 <source>Publish until</source>
             </trans-unit>
+            <trans-unit id="tx_recipes_domain_model_recipe.categories">
+                <source>Categories</source>
+            </trans-unit>
 
             <trans-unit id="tx_recipes_domain_model_component">
                 <source>Component</source>

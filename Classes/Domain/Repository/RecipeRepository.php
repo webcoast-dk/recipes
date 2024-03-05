@@ -2,36 +2,21 @@
 
 namespace WEBcoast\Recipes\Domain\Repository;
 
-use TYPO3\CMS\Core\Database\ConnectionPool;
-use TYPO3\CMS\Core\Database\Query\QueryBuilder;
+use Symfony\Contracts\Service\Attribute\Required;
 use TYPO3\CMS\Core\Database\Query\Restriction\FrontendRestrictionContainer;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Object\ObjectManager;
-use TYPO3\CMS\Extbase\Object\ObjectManagerInterface;
-use TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper;
 use TYPO3\CMS\Extbase\Persistence\Generic\Query;
 use TYPO3\CMS\Extbase\Persistence\Generic\Storage\Typo3DbQueryParser;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 
 class RecipeRepository extends Repository
 {
-    /**
-     * @var string
-     */
-    protected $tableName;
+    protected Typo3DbQueryParser $queryParser;
 
-    /**
-     * @var Typo3DbQueryParser
-     */
-    protected $queryParser;
-
-    public function __construct(ObjectManagerInterface $objectManager)
+    #[Required]
+    public function setQueryParser(Typo3DbQueryParser $queryParser): void
     {
-        parent::__construct($objectManager);
-
-        $dataMapper = $objectManager->get(DataMapper::class);
-        $this->tableName = $dataMapper->getDataMap($this->objectType)->getTableName();
-        $this->queryParser = $objectManager->get(Typo3DbQueryParser::class);
+        $this->queryParser = $queryParser;
     }
 
     public function findAll($options = [])
